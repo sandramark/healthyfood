@@ -1,0 +1,184 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --main: rgb(196, 221, 82);
+    --secondery: rgb(161, 161, 161);
+    --third: rgb(234, 236, 243);
+}
+
+body {
+    margin: 3%;
+    margin-bottom: 3rem;
+    padding: 0;
+    font-size: 100%;
+    line-height: 1.4;
+    font-family: 'Roboto', sans-serif;
+}
+
+article, figure {
+    margin: 0;
+}
+
+/* ------------ MOBILE -------------- */
+
+
+
+h1, h2, blockquote {
+    font-family: 'Kaushan Script', cursive;
+    
+}
+
+h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 300%;
+    color: var(--main);
+    
+}
+
+h2 {
+    font-size: 200%;
+    color: var(--main);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.meta, 
+.tip {
+    color: var(--secondery);
+    font-size: 80%;
+    font-style: italic;
+}
+
+
+
+blockquote {
+    font-size: 175%;
+    color: var(--secondery);
+    text-align: center;
+}
+
+hr {
+    border: 1px solid var(--main);
+    width: 5rem;  
+}
+
+
+figure {
+    max-width: 100%;
+    padding: 0;
+}
+
+figure > img {
+    width: 100%;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    color: var(--secondery);
+}
+
+.tip > img {
+    width: 100%;
+    display: none;
+}
+
+
+
+
+/* ---------- WIDE SCREEN + IPAD---------------- */
+
+@media screen and (min-width: 30em) {
+
+
+
+    article {
+        display: grid;
+        grid-template-columns: 15% 1fr 15%;
+        gap: 1rem;
+        
+        
+    }
+
+    p, blockquote {
+        margin: 0;
+    }
+
+    hr {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h1, h2, p {
+        grid-column: 2 / 3;
+    }
+
+    h1 {
+        font-size: 350%;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 250%;
+    }
+
+    blockquote {
+        font-size: 200%;
+    }
+
+    figure,
+    blockquote {
+        grid-column: 1 / span 3;
+    }
+
+    .tip__left {
+        grid-column: 1 / span 1;
+        align-self: start;
+        border-right: 0.15rem solid var(--main);
+        background-color: var(--third);
+
+        font-size: 0.8rem;
+        text-align: right;
+        padding: 0.5rem;
+
+        
+    }
+
+    .tip__right {
+        grid-column: 3 / span 1;
+        align-self: start;
+        border-left: 0.15rem solid var(--main);
+        background-color: var(--third);
+
+        font-size: 0.8rem;
+        text-align: left;
+        padding: 0.5rem;
+
+    }
+
+    .tip > img {
+        display: block;
+        padding: 0 0 5% 10%;
+        
+    }
+
+
+}
+
+/* -------------------- DESKTOP ----------------------------- */
+
+@media screen and (min-width: 75em) {
+
+
+
+    article {
+        max-width: 75rem;
+        margin: auto;
+        padding: 5%;
+        box-shadow: 0 0 15px rgb(0 0 0 / 6%);
+    }
+}
+
