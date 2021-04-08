@@ -1,1 +1,1 @@
-These pages are publish: https://sandramark.github.io/healthyfood/
+These pages are published: https://sandramark.github.io/healthyfood/
